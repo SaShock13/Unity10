@@ -15,10 +15,15 @@ public class BarierMove : MonoBehaviour
    
     void Update()
     {
+        MoveBarier();
+    }
+
+    void MoveBarier()
+    {
         if (isForward)
         {
-            newPosition = transform.position+ (Vector3.right * speed*Time.deltaTime);            
-            if(transform.position.x>= maxPosition)
+            newPosition = transform.position + (Vector3.right * speed * Time.deltaTime);
+            if (transform.position.x >= maxPosition)
             {
                 isForward = false;
             }
@@ -26,9 +31,9 @@ public class BarierMove : MonoBehaviour
         else
         {
             Debug.Log("right");
-            newPosition = transform.position + (Vector3.left * speed * Time.deltaTime);    
-            
-            if(transform.position.x<= minPosition)
+            newPosition = transform.position + (Vector3.left * speed * Time.deltaTime);
+
+            if (transform.position.x <= minPosition)
             {
                 isForward = true;
             }

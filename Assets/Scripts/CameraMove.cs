@@ -19,8 +19,13 @@ public class CameraMove : MonoBehaviour
 
     private void Update()
     {
-        newPosition = ball.transform.position+shift;
-        transform.position =  newPosition;
+        MoveCamera();
+    }
+
+    void MoveCamera()
+    {
+        newPosition = ball.transform.position + shift;
+        transform.position = newPosition;
     }
 
 }

@@ -12,9 +12,14 @@ public class PinballController : MonoBehaviour
 
     private void Update()
     {
+        BumperListener();
+    }
+
+    void BumperListener()
+    {
         if (Input.GetKey("]"))
         {
-            rightBumper.AddRelativeTorque(Vector3.up * torqueForce,ForceMode.Acceleration);
+            rightBumper.AddRelativeTorque(Vector3.up * torqueForce, ForceMode.Acceleration);
         }
         if (Input.GetKey("q"))
         {
